@@ -1,0 +1,114 @@
+/* Simple Classes */
+
+.clear { clear: both; }
+.hidden { display: none; }
+.float-left { float: left; }
+.float-right { float: right; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.no-margin-bottom { margin-bottom: 0 !important; }
+.margin-bottom-20 { margin-bottom: 20px !important; }
+
+/* LESS Mixins */
+.clearfix() {
+	&:after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
+.gradient(@start: #EEE, @stop: #FFF) {
+  background-color: @start;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@start), to(@stop));
+  background-image: -webkit-linear-gradient(top, @start, @stop);
+  background-image:    -moz-linear-gradient(top, @start, @stop);
+  background-image:     -ms-linear-gradient(top, @start, @stop);
+  background-image:      -o-linear-gradient(top, @start, @stop);
+  background-image:         linear-gradient(to bottom, @start, @stop);
+}
+
+.diagonal-gradient(@start: #EEE, @stop: #FFF) {
+  background: @start; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, @start, @stop); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, @start, @stop); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, @start, @stop); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, @start, @stop); /* Standard syntax */
+}
+
+.rounded(@radius: 4px) {
+          border-radius: @radius;
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+     
+          background-clip: padding-box; 
+  -webkit-background-clip: padding-box; 
+     -moz-background-clip: padding; 
+}
+.border-radius(@topleft: 0, @topright: 0, @bottomright: 0, @bottomleft: 0) {
+            border-top-left-radius: @topleft;
+  -webkit-border-top-left-radius: @topleft;
+        -moz-border-radius-topleft: @topleft;
+    
+          border-top-right-radius: @topright;
+  -webkit-border-top-right-radius: @topright;
+      -moz-border-radius-topright: @topright;
+  
+          border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-right-radius: @bottomright;
+       -moz-border-radius-bottomleft: @bottomleft;
+  
+          border-bottom-left-radius: @bottomleft;
+  -webkit-border-bottom-left-radius: @bottomleft;
+     -moz-border-radius-bottomright: @bottomright;
+     
+          background-clip: padding-box; 
+  -webkit-background-clip: padding-box; 
+     -moz-background-clip: padding; 
+}
+.opacity(@opacity: 0.5) {
+          opacity: @opacity;
+  -webkit-opacity: @opacity;
+     -moz-opacity: @opacity;
+   -khtml-opacity: @opacity;
+}
+.transition-duration(@duration: 0.4s) {
+            transition-duration: @duration;
+  -webkit-transition-duration: @duration;
+       -moz-transition-duration: @duration;
+}
+.transform-origin(@x-axis, @y-axis) {
+          transform-origin: @x-axis @y-axis 0;
+  -webkit-transform-origin: @x-axis @y-axis 0;
+     -moz-transform-origin: @x-axis @y-axis 0;
+}
+.rotate(@deg:5deg){
+          transform: rotate(@deg);
+  -webkit-transform: rotate(@deg);
+     -moz-transform: rotate(@deg);
+}
+.skew(@deg:5deg){
+          transform: skew(@deg);
+  -webkit-transform: skew(@deg);
+     -moz-transform: skew(@deg);
+}
+.scale(@ratio:1.5){
+          transform: scale(@ratio);
+  -webkit-transform: scale(@ratio);
+     -moz-transform: scale(@ratio);
+}
+.transition(@duration:0.2s, @ease:ease-out) {
+          transition: all @duration @ease;
+  -webkit-transition: all @duration @ease;
+     -moz-transition: all @duration @ease;
+}
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+          box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+     -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+.box-shadow (@shadow1, @shadow2: transparent 0 0 0 ) {
+        box-shadow: @shadow1, @shadow2;
+    -webkit-box-shadow: @shadow1, @shadow2;
+       -moz-box-shadow: @shadow1, @shadow2;
+}
