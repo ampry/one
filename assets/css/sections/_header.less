@@ -1,0 +1,52 @@
+header {
+	.clearfix;
+	padding: 20px 0;
+	.logo {
+		height: 60px;
+		float: left;
+		padding: 15px 0;
+		img {
+			height: 30px;
+			width: auto;
+		}
+	}
+	.menu {
+		float: left;
+		list-style: none;
+		margin-left: 120px;
+		margin-bottom: 0;
+		li {
+			float: left;
+			margin-right: 60px;
+			a {
+				color: @grey-100;
+				display: inline-block;
+				font-weight: 600;
+				line-height: 40px;
+				padding: 10px 0;
+				&:hover {
+					color: @blue;
+				}
+				&:after {
+					.icon;
+					color: @grey-80;
+					content: '\f107';
+					margin-left: 10px;
+				}
+				&:only-child {
+					&:after {
+						display: none;
+					}
+				}
+			}
+			ul {
+				display: none;
+			}
+		}
+	}
+	.header-cta {
+		.btn;
+		float: right;
+
+	}
+}
