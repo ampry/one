@@ -3,7 +3,7 @@
     <div class="c">
         <ul  itemscope itemtype="https://schema.org/BreadcrumbList">
             <li class="" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a href="https://benefits.com/" itemprop="item">
+                <a href="<? bloginfo('url'); ?>" itemprop="item">
                     <span itemprop="name">Home</span>
                 </a>
                 <span style="display:none;" itemprop="position" content="<?= $i; $i++; ?>"></span>

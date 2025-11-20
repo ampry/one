@@ -1,12 +1,40 @@
 footer {
-	background: @grey-100;
+	background: white;
+	border-top: 1px solid @grey-10;
+	font-size: 16px;
+	line-height: 30px;
 	.logo {
 		height: 60px;
 		display: block;
+		margin-bottom: 60px;
 		padding: 15px 0;
 		img {
 			height: 30px;
 			width: auto;
+		}
+	}
+	.site-description {
+
+	}
+	.cta {
+		.btn;
+	}
+	.footer-sections {
+		ul {
+			padding-left: 0;
+			list-style: none;
+			margin-bottom: 40px;
+			font-size: 14px;
+			li {
+				a {
+					color: @grey-70;
+					display: block;
+					line-height: 24px;
+					&:hover {
+						color: @blue;
+					}
+				}
+			}
 		}
 	}
 }

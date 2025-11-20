@@ -29,6 +29,6 @@
                     <?= wp_get_attachment_image(get_field('logo', 'option'), 'full'); ?>
                 </a><!-- logo -->
                 <? wp_nav_menu(array('menu' => 'Main', 'container'  => false, 'menu_class' => 'menu'));?>
-                <a class="header-cta" href="">View CTA Now!</a>
+                <? get_template_part('partials/_cta'); ?>
             </div><!-- c -->
         </header>
